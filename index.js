@@ -94,7 +94,7 @@ function allWagesFor(){
 function calculatePayroll (array){
     let payroll = 0
     for(let employee of array){
-        payroll += allWagesFor.call(employee)
+        payroll += allWagesFor.apply(employee)
     }
 
     return payroll;
